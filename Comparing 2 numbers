@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main(void) {
+  float a,b,s;
+  printf("Enter value of a =");
+  scanf("%f",&a);
+  printf("Enter value of b =");
+  scanf("%f",&b);
+  if(a>b)
+  {
+    s=a;
+  }
+  else
+  {
+    s=b;
+  }
+  printf("\nGreater number=%f",s);
+  return 0;
+}
