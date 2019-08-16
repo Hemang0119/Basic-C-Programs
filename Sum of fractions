@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+struct frac
+{
+  int num=0;
+  int den=0;
+};
+
+int input(div f[5])
+{
+  int i=0;
+  for(i=0;i<5:++i)
+  {
+    printf("Enter numerator=");
+    scanf("%d",&f[i].num);
+    printf("Enter denominator=");
+    scanf("%d",&f[i].den);
+  }
+  return div;
+  
+}
+
+
+int main(void) {
+  frac f[5];
+  input(frac);
+  return 0;
+}
