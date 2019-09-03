@@ -1,14 +1,11 @@
 #include <stdio.h>
 
-typedef struct
-{
- int num;
- int den;
-}Fract[100],Sum;
+int n[100];
+  int d[100];
 
 int quantity();
 void sum(int num);
-void input(int num);
+void input(int );
 
 int main()
 {
@@ -32,32 +29,34 @@ void input(int num)
   int i=0;
   for(i=0;i<num;++i)
   {
-   printf("Enter numerator denominator:");
-   scanf("%d%d",&Fract.num[i],&Fract.den[i]);
+   printf("Enter numerator:");
+   scanf("%d",&n[i]);
+   printf("Enter denominator:");
+   scanf("%d",&d[i]);
   }
 }
 
 void sum(int num)
 {
-  int lcd=1,i=0;
+  int lcd=1,i=0,snum=0,sden=0;
 
   for(i=0;i<num;++i)
   {
-    lcd*=Fract.[i];
-  }
-
-  for(i=0;i<num;+i)
-  {
-    Fract.num[i]*=lcd;
-    Fract.num[i]=Fract.num[i]/Fract.den[i];
+    lcd*=d[i];
   }
 
   for(i=0;i<num;++i)
   {
-    Sum.num+=Fract.num[i];
-    Sum.den=lcd;
+    n[i]*=lcd;
+    n[i]=n[i]/d[i];
   }
 
-  printf("Sum of "num" Fractions=")
-  printf("%d/%d",Sum.num,Sum.den);
+  for(i=0;i<num;++i)
+  {
+    snum+=n[i];
+    sden=lcd;
+  }
+  
+  printf("Sum of Fractions=");
+  printf("%d/%d",snum,sden);
 }
